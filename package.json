@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 
-  "homepage": "https://Shruti-425.github.io/Portfolio/",
+"homepage": "https://shruti-425.github.io/Portfolio",
 
   "scripts": {
     "dev": "vite",
