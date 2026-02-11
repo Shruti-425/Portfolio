@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import profileImg from "./assets/image.jpeg";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
           </ul>
 
           <a
-            href="/official.pdf"
+            href={`${import.meta.env.BASE_URL}official.pdf`}
             download
             className="border border-orange-400 px-5 py-2 rounded-lg text-orange-400 hover:bg-orange-400 hover:text-black transition font-medium"
           >
@@ -70,7 +71,6 @@ export default function App() {
           </div>
         </motion.div>
 
-
         {/* RIGHT IMAGE */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -79,13 +79,11 @@ export default function App() {
           className="flex justify-center items-center"
         >
           <img
-            src="/image.jpeg"
+            src={profileImg}
             alt="Shruti"
-            className="w-72 h-72 object-cover rounded-full border-4 border-orange-400 shadow-xl hover:scale-105 transition duration-500"
+            className="w-72 h-72 object-cover object-center rounded-full border-4 border-orange-400 shadow-xl hover:scale-105 transition duration-500"
           />
         </motion.div>
-
-
       </section>
 
       {/* ================= SKILLS ================= */}
