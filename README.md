@@ -83,9 +83,3 @@ npm run deploy
 ```
 
 ---
-
-## 📄 Resume
-
-The resume is available for download directly from the website.
-
----
