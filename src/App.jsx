@@ -20,7 +20,7 @@ export default function App() {
         </div>
       </nav>
 
-      {/* ================= HERO SECTION ================= */}
+      {/* ================= HERO ================= */}
       <section
         id="home"
         className="max-w-7xl mx-auto grid md:grid-cols-2 items-center px-6 md:px-12 py-32 gap-16"
@@ -30,20 +30,14 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-gray-400 text-lg">Hello, I’m</p>
-
-          <h1 className="text-5xl md:text-6xl font-bold mt-2">
-            Shruti Singh
-          </h1>
-
+          <p className="text-gray-400 text-lg">Hi, I’m</p>
+          <h1 className="text-5xl md:text-6xl font-bold mt-2">Shruti Singh</h1>
           <h2 className="text-2xl md:text-3xl mt-4 font-semibold text-orange-400">
             AI/ML Engineer & Full Stack Developer
           </h2>
-
           <p className="text-gray-400 mt-6 max-w-lg leading-relaxed">
-            I build intelligent, scalable, and cloud-ready applications.
-            Passionate about solving real-world problems using Artificial Intelligence,
-            modern web technologies, and optimized system architecture.
+            I design intelligent, scalable, and cloud-ready applications. My passion is solving
+            real-world problems using AI, modern web technologies, and efficient system architecture.
           </p>
 
           <div className="mt-8 flex gap-4">
@@ -53,7 +47,6 @@ export default function App() {
             >
               View Projects
             </a>
-
             <a
               href="#contact"
               className="border border-orange-400 px-6 py-3 rounded-lg text-orange-400 hover:bg-orange-400 hover:text-black transition"
@@ -79,16 +72,35 @@ export default function App() {
 
       {/* ================= ABOUT ================= */}
       <section id="about" className="bg-[#111111] py-28">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-semibold mb-10">About Me</h2>
-
-          <p className="text-gray-400 leading-relaxed text-lg">
-            I am a Computer Science undergraduate with a strong foundation in
-            Artificial Intelligence, Full Stack Development, and Cloud Computing.
-            My focus lies in designing scalable systems, building production-ready
-            applications, and implementing DevOps practices for efficient deployment.
-            I value clean code, optimized performance, and structured architecture.
-          </p>
+        <div className="max-w-6xl mx-auto px-6 md:px-12 grid md:grid-cols-2 items-center gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <img
+              src={profileImg}
+              alt="Shruti"
+              className="w-full rounded-2xl shadow-2xl border-4 border-orange-400"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-gray-400"
+          >
+            <h2 className="text-4xl font-semibold mb-6 text-white">About Me</h2>
+            <p className="leading-relaxed text-lg mb-4">
+              I am a Computer Science undergraduate specializing in AI, Full Stack Development, 
+              and Cloud Computing. I focus on building scalable, production-ready systems 
+              and implementing DevOps practices for efficient deployment.
+            </p>
+            <p className="leading-relaxed text-lg">
+              I value clean code, optimized performance, and structured architecture, 
+              ensuring applications are robust, maintainable, and user-friendly.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -98,7 +110,6 @@ export default function App() {
           <h2 className="text-center text-4xl font-semibold mb-16">
             Technical Expertise
           </h2>
-
           <div className="grid md:grid-cols-4 gap-8">
             {[
               "Programming: C, C++, Java, Python",
@@ -165,11 +176,10 @@ export default function App() {
           </h2>
 
           <p className="text-gray-400 mb-2">
-            📧 ss.upes123@gmail.com
+             ss.upes123@gmail.com
           </p>
-
           <p className="text-gray-400 mb-8">
-            📱 +91-9369748532
+             +91-9369748532
           </p>
 
           <div className="flex justify-center gap-8 text-orange-400 font-medium">
