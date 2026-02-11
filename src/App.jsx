@@ -16,9 +16,13 @@ export default function App() {
             <li><a href="#contact" className="hover:text-orange-400 transition">Contact</a></li>
           </ul>
 
-          <button className="bg-orange-400 text-black px-5 py-2 rounded-lg font-semibold hover:scale-105 transition">
-            Hire Me
-          </button>
+          <a
+            href="/official.pdf"
+            download
+            className="border border-orange-400 px-5 py-2 rounded-lg text-orange-400 hover:bg-orange-400 hover:text-black transition font-medium"
+          >
+            Resume
+          </a>
         </div>
       </nav>
 
@@ -33,67 +37,70 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-gray-400 text-lg">Hi, I am</p>
+          <p className="text-gray-400 text-lg">Hello, I’m</p>
 
           <h1 className="text-5xl md:text-6xl font-bold mt-2">
             Shruti
           </h1>
 
-          <h2 className="text-3xl md:text-4xl mt-3 font-semibold">
-            <span className="text-orange-400">Full Stack</span> Developer
+          <h2 className="text-2xl md:text-3xl mt-4 font-semibold text-orange-400">
+            AI/ML | Full Stack Developer | Cloud & DevOps
           </h2>
 
-          <p className="text-gray-400 mt-6 max-w-md leading-relaxed">
-            Computer Science undergraduate focused on full stack development,
-            cloud computing, and scalable systems.
+          <p className="text-gray-400 mt-6 max-w-lg leading-relaxed">
+            I design and develop intelligent, scalable, and cloud-ready
+            applications. Passionate about solving real-world problems
+            through modern technologies and clean system architecture.
           </p>
 
           <div className="mt-8 flex gap-4">
-            <button className="bg-orange-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition">
-              Hire Me
-            </button>
+            <a
+              href="#projects"
+              className="bg-orange-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
+            >
+              View My Work
+            </a>
 
-            <button className="border border-orange-400 px-6 py-3 rounded-lg text-orange-400 hover:bg-orange-400 hover:text-black transition">
-              Download CV
-            </button>
+            <a
+              href="#contact"
+              className="border border-orange-400 px-6 py-3 rounded-lg text-orange-400 hover:bg-orange-400 hover:text-black transition"
+            >
+              Let’s Collaborate
+            </a>
           </div>
         </motion.div>
+
 
         {/* RIGHT IMAGE */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="relative flex justify-center items-center"
+          className="flex justify-center items-center"
         >
-          {/* Glow background */}
-          <div className="absolute w-80 h-80 bg-orange-400/20 blur-3xl rounded-full"></div>
-
-          {/* Dark circle */}
-          <div className="absolute w-72 h-72 bg-[#1f1f1f] rounded-full"></div>
-
-          {/* Profile Image */}
           <img
             src="/image.jpeg"
             alt="Shruti"
-            className="relative z-10 w-56 h-56 object-cover rounded-full border-4 border-orange-400 shadow-lg"
+            className="w-72 h-72 object-cover rounded-full border-4 border-orange-400 shadow-xl hover:scale-105 transition duration-500"
           />
         </motion.div>
+
+
       </section>
 
       {/* ================= SKILLS ================= */}
       <section id="skills" className="bg-[#111111] py-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="text-center text-4xl font-semibold mb-16">
-            Technical Skills
+            Technical Expertise
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              "C / C++ / Java / Python",
-              "HTML / CSS / JS / MERN",
-              "AWS / Docker / CI-CD",
-              "DSA / OOPS / DBMS",
+              "Programming: C, C++, Java, Python",
+              "Frontend & Backend: React, Node.js, Express, MERN",
+              "Cloud & DevOps: AWS, Docker, CI/CD, Git",
+              "Core CS: DSA, OOPS, DBMS, System Design",
             ].map((skill, i) => (
               <motion.div
                 key={i}
@@ -111,23 +118,32 @@ export default function App() {
       <section id="projects" className="py-28">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <h2 className="text-center text-4xl font-semibold mb-16">
-            Projects
+            Featured Projects
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              "Fog Detection System",
-              "Cloud Food Ordering System",
-              "Portfolio Website",
+              {
+                title: "Fog Detection System",
+                desc: "AI-powered system using image processing and machine learning to detect environmental fog conditions."
+              },
+              {
+                title: "Cloud Based Food Ordering System",
+                desc: "Scalable full stack application integrated with AWS services and secure backend architecture."
+              },
+              {
+                title: "Developer Portfolio",
+                desc: "Modern responsive portfolio built with React, Tailwind CSS, and Framer Motion."
+              }
             ].map((project, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -8 }}
-                className="bg-[#151515] p-8 rounded-xl hover:bg-[#1f1f1f] transition"
+                className="bg-[#151515] p-8 rounded-xl hover:bg-[#1f1f1f] transition cursor-pointer"
               >
-                <h3 className="text-xl font-semibold mb-4">{project}</h3>
+                <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
                 <p className="text-gray-400 text-sm">
-                  Real-world project showcasing system design and problem solving.
+                  {project.desc}
                 </p>
               </motion.div>
             ))}
@@ -138,10 +154,16 @@ export default function App() {
       {/* ================= CONTACT ================= */}
       <section id="contact" className="bg-[#111111] py-28 text-center">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-semibold mb-8">Contact Me</h2>
+          <h2 className="text-4xl font-semibold mb-8">
+            Let’s Build Something Great Together
+          </h2>
+
+          <p className="text-gray-400 mb-2">
+            📧 ss.upes123@gmail.com
+          </p>
 
           <p className="text-gray-400 mb-6">
-            ss.upes123@gmail.com
+            📱 +91-9369748532
           </p>
 
           <div className="flex justify-center gap-8 text-orange-400 font-medium">
@@ -161,4 +183,3 @@ export default function App() {
     </div>
   );
 }
-
