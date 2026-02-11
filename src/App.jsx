@@ -8,7 +8,7 @@ export default function App() {
       {/* ================= NAVBAR ================= */}
       <nav className="sticky top-0 z-50 bg-[#0b0b0b]/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-5">
-          <h1 className="text-2xl font-bold tracking-wider">Shruti Singh</h1>
+          <h1 className="text-2xl font-bold tracking-wider">Shruti</h1>
 
           <ul className="hidden md:flex gap-8 text-gray-400 font-medium">
             <li><a href="#home" className="hover:text-orange-400 transition">Home</a></li>
@@ -31,7 +31,7 @@ export default function App() {
           transition={{ duration: 0.8 }}
         >
           <p className="text-gray-400 text-lg">Hi, I’m</p>
-          <h1 className="text-5xl md:text-6xl font-bold mt-2">Shruti Singh</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mt-2">Shruti</h1>
           <h2 className="text-2xl md:text-3xl mt-4 font-semibold text-orange-400">
             AI/ML Engineer & Full Stack Developer
           </h2>
