@@ -1,201 +1,58 @@
-import { motion } from "framer-motion";
-import profileImg from "./assets/image.jpeg";
+import { useState } from 'react';
+import Navbar from './components/Navbar';
+import HeroSection from './components/HeroSection';
+import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
+import ExperienceSection from './components/ExperienceSection';
+import ProjectsSection from './components/ProjectsSection';
+import CertificationsAchievements from './components/CertificationsAchievements';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
+import AIAgentTerminal from './components/AIAgentTerminal';
+import { Terminal } from 'lucide-react';
 
 export default function App() {
+  const [terminalOpen, setTerminalOpen] = useState(false);
+
   return (
-    <div className="min-h-screen bg-[#0b0b0b] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#07090e] text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200 relative">
 
-      {/* ================= NAVBAR ================= */}
-      <nav className="sticky top-0 z-50 bg-[#0b0b0b]/80 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-5">
-          <h1 className="text-2xl font-bold tracking-wider">Shruti</h1>
+      {/* Glassmorphic Navbar */}
+      <Navbar onOpenTerminal={() => setTerminalOpen(true)} />
 
-          <ul className="hidden md:flex gap-8 text-gray-400 font-medium">
-            <li><a href="#home" className="hover:text-orange-400 transition">Home</a></li>
-            <li><a href="#about" className="hover:text-orange-400 transition">About</a></li>
-            <li><a href="#skills" className="hover:text-orange-400 transition">Skills</a></li>
-            <li><a href="#projects" className="hover:text-orange-400 transition">Projects</a></li>
-            <li><a href="#contact" className="hover:text-orange-400 transition">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+      {/* Main Content Sections */}
+      <main>
+        <HeroSection onOpenTerminal={() => setTerminalOpen(true)} />
+        <AboutSection />
+        <SkillsSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <CertificationsAchievements />
+        <ContactSection />
+      </main>
 
-      {/* ================= HERO ================= */}
-      <section
-        id="home"
-        className="max-w-7xl mx-auto grid md:grid-cols-2 items-center px-6 md:px-12 py-32 gap-16"
+      {/* Footer */}
+      <Footer />
+
+      {/* Floating AI Terminal Trigger Widget */}
+      <button
+        onClick={() => setTerminalOpen(true)}
+        className="fixed bottom-6 right-6 z-40 p-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-orange-500 text-slate-950 shadow-2xl shadow-cyan-500/40 hover:scale-110 active:scale-95 transition-all duration-300 group flex items-center gap-2 border border-white/20"
+        title="Launch Interactive AI Terminal"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <p className="text-gray-400 text-lg">Hi, I’m</p>
-          <h1 className="text-5xl md:text-6xl font-bold mt-2">Shruti</h1>
-          <h2 className="text-2xl md:text-3xl mt-4 font-semibold text-orange-400">
-            AI/ML Engineer & Full Stack Developer
-          </h2>
-          <p className="text-gray-400 mt-6 max-w-lg leading-relaxed">
-            I design intelligent, scalable, and cloud-ready applications. My passion is solving
-            real-world problems using AI, modern web technologies, and efficient system architecture.
-          </p>
+        <Terminal className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+        <span className="hidden sm:inline font-mono font-extrabold text-xs tracking-wider uppercase">
+          AI Agent
+        </span>
+      </button>
 
-          <div className="mt-8 flex gap-4">
-            <a
-              href="#projects"
-              className="bg-orange-400 text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition"
-            >
-              View Projects
-            </a>
-            <a
-              href="#contact"
-              className="border border-orange-400 px-6 py-3 rounded-lg text-orange-400 hover:bg-orange-400 hover:text-black transition"
-            >
-              Get In Touch
-            </a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="flex justify-center"
-        >
-          <img
-            src={profileImg}
-            alt="Shruti"
-            className="w-80 h-80 object-cover rounded-full border-4 border-orange-400 shadow-2xl hover:scale-105 transition duration-500"
-          />
-        </motion.div>
-      </section>
-
-      {/* ================= ABOUT ================= */}
-      <section id="about" className="bg-[#111111] py-28">
-        <div className="max-w-6xl mx-auto px-6 md:px-12 grid md:grid-cols-2 items-center gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <img
-              src={profileImg}
-              alt="Shruti"
-              className="w-full rounded-2xl shadow-2xl border-4 border-orange-400"
-            />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-gray-400"
-          >
-            <h2 className="text-4xl font-semibold mb-6 text-white">About Me</h2>
-            <p className="leading-relaxed text-lg mb-4">
-              I am a Computer Science undergraduate specializing in AI, Full Stack Development, 
-              and Cloud Computing. I focus on building scalable, production-ready systems 
-              and implementing DevOps practices for efficient deployment.
-            </p>
-            <p className="leading-relaxed text-lg">
-              I value clean code, optimized performance, and structured architecture, 
-              ensuring applications are robust, maintainable, and user-friendly.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ================= SKILLS ================= */}
-      <section id="skills" className="py-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="text-center text-4xl font-semibold mb-16">
-            Technical Expertise
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            {[
-              "Programming: C, C++, Java, Python",
-              "Web: React, Node.js, Express, MERN",
-              "Cloud & DevOps: AWS, Docker, CI/CD",
-              "Core CS: DSA, OOPS, DBMS",
-            ].map((skill, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.05 }}
-                className="bg-[#1a1a1a] p-8 rounded-xl text-center text-gray-300 hover:bg-[#222222] transition shadow-lg"
-              >
-                {skill}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ================= PROJECTS ================= */}
-      <section id="projects" className="bg-[#111111] py-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <h2 className="text-center text-4xl font-semibold mb-16">
-            Featured Projects
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                title: "Fog Detection System",
-                desc: "AI-powered image processing system for real-time fog detection using machine learning.",
-              },
-              {
-                title: "Cloud Food Ordering System",
-                desc: "Scalable MERN-based application integrated with AWS services and secure backend APIs.",
-              },
-              {
-                title: "Developer Portfolio",
-                desc: "Modern responsive portfolio built using React, Tailwind CSS, and Framer Motion.",
-              },
-            ].map((project, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10 }}
-                className="bg-[#1a1a1a] p-8 rounded-xl hover:bg-[#222222] transition shadow-xl"
-              >
-                <h3 className="text-xl font-semibold mb-4 text-orange-400">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {project.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ================= CONTACT ================= */}
-      <section id="contact" className="py-28 text-center">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-semibold mb-8">
-            Let’s Work Together
-          </h2>
-
-          <p className="text-gray-400 mb-2">
-             ss.upes123@gmail.com
-          </p>
-          <p className="text-gray-400 mb-8">
-             +91-9369748532
-          </p>
-
-          <div className="flex justify-center gap-8 text-orange-400 font-medium">
-            <a href="https://github.com/Shruti-425" target="_blank" rel="noreferrer" className="hover:text-white transition">
-              GitHub
-            </a>
-            <a href="https://leetcode.com/u/Shruti_12-34/" target="_blank" rel="noreferrer" className="hover:text-white transition">
-              LeetCode
-            </a>
-            <a href="https://www.credly.com/users/shruti.57197566/badges" target="_blank" rel="noreferrer" className="hover:text-white transition">
-              Credly
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* AI Agent Terminal Simulator Modal */}
+      <AIAgentTerminal
+        isOpen={terminalOpen}
+        onClose={() => setTerminalOpen(false)}
+      />
 
     </div>
   );
 }
+

@@ -3,26 +3,24 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
-"homepage": "https://shruti-425.github.io/Portfolio",
-
+  "homepage": "https://shruti-425.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-
   "dependencies": {
+    "canvas-confetti": "^1.9.4",
     "framer-motion": "^12.34.0",
+    "lucide-react": "^1.28.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "three": "^0.185.1"
   },
-
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/react": "^19.2.7",
