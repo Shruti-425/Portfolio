@@ -19,7 +19,7 @@ export default function AboutSection() {
       color: 'from-purple-500 to-pink-500',
     },
     {
-      title: 'Full-Stack & AI Agents Engineer',
+      title: 'Full-Stack & AI Agents',
       institution: 'Xebia Software Developer Intern',
       detail: 'Engineered Skill Coverage Optimizer, Exam Platform, and 12+ RESTful APIs with Node.js/PostgreSQL.',
       icon: Terminal,
@@ -95,9 +95,8 @@ export default function AboutSection() {
                 <Layers className="w-6 h-6 text-cyan-400" />
                 <span>Engineering Philosophy</span>
               </h3>
-              <p className="text-slate-300 leading-relaxed text-base mb-4">
-                I specialize in <strong className="text-cyan-300">Artificial Intelligence</strong> and <strong className="text-purple-300">Cloud Computing</strong> with hands-on expertise spanning Deep Learning (CNNs, ResNet, YOLOv8), Computer Vision, AI Agents, and full-stack API development.
-              </p>
+<p className="text-slate-300 leading-relaxed text-base mb-4">I specialize in <strong className="text-purple-300">Cloud Computing</strong>,with knowledge and hands-on experience in <strong className="text-cyan-300">Artificial Intelligence</strong>,Machine Learning, Computer Vision, and full-stack development. I have workedwith technologies including CNNs, ResNet, YOLOv8, AI Agents, and API development.
+</p>
               <p className="text-slate-300 leading-relaxed text-base">
                 Whether fine-tuning real-time object detection models at <strong className="text-cyan-400">IIT Kanpur</strong> or engineering high-throughput microservices and prompt-engineered recommendation pipelines at <strong className="text-cyan-400">Xebia</strong>, my focus is delivering clean, maintainable, and reliable software.
               </p>
