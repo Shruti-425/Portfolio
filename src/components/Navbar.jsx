@@ -45,7 +45,7 @@ export default function Navbar({ onOpenTerminal }) {
               SHRUTI
             </span>
             <span className="text-[10px] font-mono text-cyan-400 tracking-widest uppercase -mt-1 flex items-center gap-1">
-              <Sparkles className="w-2.5 h-2.5" /> AI & Cloud Engineer
+              <Sparkles className="w-2.5 h-2.5" /> Cloud Computing
             </span>
           </div>
         </a>
