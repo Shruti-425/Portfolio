@@ -12,6 +12,7 @@ export default function CertificationsAchievements() {
   const achievements = [
     { title: 'HackerRank Gold Badges', desc: 'Earned Gold Badges in C, C++, and Python for problem solving & coding mastery.', icon: Trophy },
     { title: 'Smart India Hackathon', desc: 'Participant in Smart India Hackathon (SIH) 2024 & 2025.', icon: Star },
+    { title: 'Adobe University Hackathon', desc: 'Participant in Adobe University Hackathon 2026.', icon: Star },
     { title: 'Open Source Contributor', desc: 'Active contributor to open-source repositories and tech initiatives.', icon: Sparkles },
   ];
 
@@ -26,7 +27,7 @@ export default function CertificationsAchievements() {
     },
     {
       title: 'Active Member - Google Developer Groups (GDG)',
-      impact: 'Participated in technical workshops, cloud study jams, and hackathons.'
+      impact: 'Participated in technical workshops and cloud study jams.'
     },
     {
       title: 'Campus Ambassador - Internshala',
