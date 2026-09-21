@@ -87,9 +87,19 @@ export default function HeroSection({ onOpenTerminal }) {
             </div>
 
             {/* Summary */}
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
-              Computer Science undergraduate specializing in <strong className="text-cyan-300">Artificial Intelligence</strong> and <strong className="text-purple-300">Cloud Computing</strong>. Experienced in building production-oriented AI applications using <span className="font-mono text-cyan-400">YOLOv8</span>, <span className="font-mono text-cyan-400">TensorFlow</span>, <span className="font-mono text-cyan-400">OpenCV</span>, <span className="font-mono text-cyan-400">Node.js</span>, <span className="font-mono text-cyan-400">PostgreSQL</span>, and <span className="font-mono text-cyan-400">AWS</span>.
-            </p>
+<p className="text-slate-300 text-base sm:text-lg leading-relaxed mb-8 max-w-2xl">
+  Computer Science undergraduate specializing in{" "}
+  <strong className="text-purple-300">Cloud Computing</strong>, with hands-on
+  experience in cloud technologies and exposure to{" "}
+  <strong className="text-cyan-300">Artificial Intelligence</strong>, Machine
+  Learning, and Computer Vision. Experienced in building projects using{" "}
+  <span className="font-mono text-cyan-400">AWS</span>,{" "}
+  <span className="font-mono text-cyan-400">Node.js</span>,{" "}
+  <span className="font-mono text-cyan-400">PostgreSQL</span>,{" "}
+  <span className="font-mono text-cyan-400">TensorFlow</span>,{" "}
+  <span className="font-mono text-cyan-400">OpenCV</span>, and{" "}
+  <span className="font-mono text-cyan-400">YOLOv8</span>.
+</p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
