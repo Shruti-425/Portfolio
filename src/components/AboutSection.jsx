@@ -5,7 +5,7 @@ import profileImg from '../assets/image.jpeg';
 export default function AboutSection() {
   const highlights = [
     {
-      title: 'B.Tech CS (CCVT)',
+      title: 'B.Tech CSE (CCVT)',
       institution: 'UPES Dehradun (2023 – 2027)',
       detail: 'CGPA: 7.6/10 • Specializing in Cloud Computing & Virtualization Tech',
       icon: GraduationCap,
@@ -71,7 +71,7 @@ export default function AboutSection() {
                   <div className="flex items-center justify-between">
                     <div>
                       <h4 className="text-white font-bold text-base">Shruti</h4>
-                      <p className="text-cyan-400 text-xs font-mono">B.Tech CS (CCVT) • UPES Dehradun</p>
+                      <p className="text-cyan-400 text-xs font-mono">B.Tech CSE (CCVT) • UPES Dehradun</p>
                     </div>
                     <span className="px-3 py-1 bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono rounded-md">
                       2023 - 2027
